@@ -49,7 +49,7 @@ interface Guild {
 
 client.once("ready", async () => {
   const channel = client.channels.cache.get(
-    "1358399086008598558"
+    "1310994800727560273"
   ) as TextChannel;
 
   cron.schedule(
