@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Slack",
+    "rank": 1,
+    "encounterName": "Mug'Zee",
+    "bestPercent": 3.21,
+    "pulls": 128
+  },
+  {
+    "name": "Tony Halme Pro Skater",
+    "rank": 2,
+    "encounterName": "Mug'Zee",
+    "bestPercent": 4.48,
+    "pulls": 57
+  },
+  {
+    "name": "Colour",
+    "rank": 3,
+    "encounterName": "Mug'Zee",
+    "bestPercent": 18.34,
+    "pulls": 67
+  },
+  {
+    "name": "Muisted",
+    "rank": 4,
+    "encounterName": "Mug'Zee",
+    "bestPercent": 52.67,
+    "pulls": 15
+  },
+  {
+    "name": "Forbidden",
+    "rank": 5,
+    "encounterName": "One-Armed Bandit",
+    "bestPercent": 39.27,
+    "pulls": 67
+  },
+  {
+    "name": "Noni",
+    "rank": 6,
+    "encounterName": "One-Armed Bandit",
+    "bestPercent": 47.41,
+    "pulls": 108
+  },
+  {
+    "name": "Kultzipuppelit",
+    "rank": 7,
+    "encounterName": "One-Armed Bandit",
+    "bestPercent": 62.52,
+    "pulls": 47
+  },
+  {
+    "name": "TURBO SAAB",
+    "rank": 8,
+    "encounterName": "One-Armed Bandit",
+    "bestPercent": 74.02,
+    "pulls": 38
+  }
+]
