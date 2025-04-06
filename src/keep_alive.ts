@@ -1,12 +1,10 @@
-import express from "express";
+import http from "http";
 
-const app = express();
-const PORT = process.env.PORT || 3000;
-
-app.get("/", (_req, res) => {
-  res.send("Bot is alive!");
+const server = http.createServer((req, res) => {
+  res.write("I'm alive");
+  res.end();
 });
 
-app.listen(PORT, () => {
-  console.log(`Keep-alive server running on port ${PORT}`);
+server.listen(8080, () => {
+  console.log("Keep-alive server running on port 8080");
 });

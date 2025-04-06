@@ -12,7 +12,7 @@ import { race } from "./recurring/race";
 import cron from "node-cron";
 import Anthropic from "@anthropic-ai/sdk";
 import fs from "fs";
-
+import "./keep_alive";
 const anthropic = new Anthropic();
 
 dotenv.config();

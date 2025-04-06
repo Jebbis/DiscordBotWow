@@ -11,6 +11,7 @@ const race_1 = require("./recurring/race");
 const node_cron_1 = __importDefault(require("node-cron"));
 const sdk_1 = __importDefault(require("@anthropic-ai/sdk"));
 const fs_1 = __importDefault(require("fs"));
+require("./keep_alive");
 const anthropic = new sdk_1.default();
 dotenv_1.default.config();
 const client = new discord_js_1.Client({
