@@ -56,7 +56,7 @@ client.once("ready", async () => {
   ) as TextChannel;
 
   cron.schedule(
-    "* 15-23 * * *",
+    "* 15-22 * * *",
     async () => {
       try {
         console.log("Running scheduled race check (Helsinki time)...");
@@ -100,7 +100,7 @@ client.once("ready", async () => {
                 content: [
                   {
                     type: "text",
-                    text: `Based on the data i provide you can you write a edgy sarcastic meme like tweet about ${name} based on their ranking, pull count, bestpercent and where they are in the raid meaning how many encounters they have killed. Take into account how they are doing compared to other guilds on the same encounterName. Context to use: This is a race and its called Mudleague. If best Percent is 0% that means the guild slained the encouter. If a guild is doing very good its called smurffing. If a guild has a lot of pulls compared to others it referenced as "X guild is in shambles". Mayhem. The tone should be sarcastic style, humorous, friendly banter, sometimes dramatic. It should reflect competitive nature of the race. You can use some emojis but not too much(No need to use everytime), maximum of three per tweet. If a guild goes past another guilds best percentage make sure to mention that. The first guild to get Gallywix to 0% will be crowded as the winner of Mudleague. Provide only the tweet and not explanation how it was made. 
+                    text: `Based on the data i provide you can you write a edgy sarcastic meme like tweet about ${name} based on their ranking, pull count, bestpercent and where they are in the raid meaning how many encounters they have killed. Take into account how they are doing compared to other guilds on the same encounterName. Context to use: This is a race and its called Mudleague. If best Percent is 0% that means the guild slained the encouter. If a guild is doing very good its called smurffing. If a guild has a lot of pulls compared to others it referenced as "X guild is in shambles". Mayhem. The tone should be sarcastic style, humorous, friendly banter, sometimes dramatic. It should reflect competitive nature of the race. You can use some emojis but not too much(No need to use everytime), maximum of three per tweet. If a guild goes past another guilds best percentage make sure to mention that. Dont be so mean everytime, be cheerful sometimes too when a guild is making progress. The first guild to get Gallywix to 0% will be crowded as the winner of Mudleague. This is world of warcraft raid race and the raid iscalled Liberation of Undermine. List of guilds leaders: Falsu is Slacks, Laku is tony halme pro skaters, Jabbis is Muisteds, Ironi is Kultzipuppelits, Aville is Nonis. Provide only the tweet and not explanation how it was made. 
                     Raids encounters from start to end:
                       1. Vexie
                       2. Cauldron of Carnage
