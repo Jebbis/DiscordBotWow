@@ -13,9 +13,12 @@ import cron from "node-cron";
 import Anthropic from "@anthropic-ai/sdk";
 import fs from "fs";
 import "./keep_alive";
-const anthropic = new Anthropic();
 
 dotenv.config();
+
+const anthropic = new Anthropic({
+  apiKey: process.env.ANTHROPIC_API_KEY,
+});
 
 const client = new Client({
   intents: [

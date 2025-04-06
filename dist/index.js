@@ -12,8 +12,10 @@ const node_cron_1 = __importDefault(require("node-cron"));
 const sdk_1 = __importDefault(require("@anthropic-ai/sdk"));
 const fs_1 = __importDefault(require("fs"));
 require("./keep_alive");
-const anthropic = new sdk_1.default();
 dotenv_1.default.config();
+const anthropic = new sdk_1.default({
+    apiKey: process.env.ANTHROPIC_API_KEY,
+});
 const client = new discord_js_1.Client({
     intents: [
         discord_js_1.GatewayIntentBits.Guilds,
@@ -34,8 +36,8 @@ new commandkit_1.CommandKit({
     //bulkRegister: true,
 });
 client.once("ready", async () => {
-    const channel = client.channels.cache.get("1358399086008598558");
-    node_cron_1.default.schedule("* 17-23 * * *", async () => {
+    const channel = client.channels.cache.get("1310994800727560273");
+    node_cron_1.default.schedule("* 15-23 * * *", async () => {
         try {
             console.log("Running scheduled race check (Helsinki time)...");
             const guild_data = await (0, race_1.race)();
