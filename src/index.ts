@@ -56,7 +56,7 @@ client.once("ready", async () => {
   ) as TextChannel;
 
   cron.schedule(
-    "* 15-22 * * *",
+    "* 17-22 * * *",
     async () => {
       try {
         console.log("Running scheduled race check (Helsinki time)...");
