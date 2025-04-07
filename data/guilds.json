@@ -3,8 +3,8 @@
     "name": "Slack",
     "rank": 1,
     "encounterName": "Gallywix",
-    "bestPercent": 66.21,
-    "pulls": 37
+    "bestPercent": 9.44,
+    "pulls": 58
   },
   {
     "name": "Tony Halme Pro Skater",
@@ -28,31 +28,31 @@
     "pulls": 51
   },
   {
-    "name": "Noni",
+    "name": "Forbidden",
     "rank": 5,
+    "encounterName": "One-Armed Bandit",
+    "bestPercent": 19.1,
+    "pulls": 83
+  },
+  {
+    "name": "Noni",
+    "rank": 6,
     "encounterName": "One-Armed Bandit",
     "bestPercent": 37.64,
     "pulls": 157
   },
   {
-    "name": "Forbidden",
-    "rank": 6,
-    "encounterName": "One-Armed Bandit",
-    "bestPercent": 39.27,
-    "pulls": 67
-  },
-  {
     "name": "Kultzipuppelit",
     "rank": 7,
     "encounterName": "One-Armed Bandit",
-    "bestPercent": 57.46,
+    "bestPercent": 57.5,
     "pulls": 96
   },
   {
     "name": "TURBO SAAB",
     "rank": 8,
     "encounterName": "One-Armed Bandit",
-    "bestPercent": 74.02,
-    "pulls": 38
+    "bestPercent": 61.1,
+    "pulls": 73
   }
 ]
