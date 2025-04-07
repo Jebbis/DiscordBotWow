@@ -199,7 +199,6 @@ export async function race(): Promise<any> {
   );
   const filtered = filterGuildProgressData(data);
   console.log(filtered);
-  return;
   const changedResults = await compareWithFile(filtered);
   /* console.log(changedResults); */
   return changedResults;
