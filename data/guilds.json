@@ -3,14 +3,14 @@
     "name": "Slack",
     "rank": 1,
     "encounterName": "Gallywix",
-    "bestPercent": 9.44,
+    "bestPercent": 1.28,
     "pulls": 58
   },
   {
     "name": "Tony Halme Pro Skater",
     "rank": 2,
     "encounterName": "Mug'Zee",
-    "bestPercent": 4.48,
+    "bestPercent": 0,
     "pulls": 57
   },
   {
@@ -45,7 +45,7 @@
     "name": "Kultzipuppelit",
     "rank": 7,
     "encounterName": "One-Armed Bandit",
-    "bestPercent": 57.5,
+    "bestPercent": 57.46,
     "pulls": 96
   },
   {

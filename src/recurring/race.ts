@@ -124,6 +124,42 @@ export async function race(): Promise<any> {
     }
   }
 
+  async function get_pescorus_data(accessToken: string): Promise<any> {
+    const graphqlApiUrl = "https://www.warcraftlogs.com/api/v2/client";
+
+    const query = `
+    query {
+      progressRaceData {
+        progressRace (
+          serverRegion: "eu",
+          serverSlug: "kazzak",
+          guildID:238024)
+      }
+    }
+    `;
+
+    try {
+      const response = await axios.post(
+        graphqlApiUrl,
+        { query },
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${accessToken}`,
+          },
+        }
+      );
+
+      return response.data; // Return the full JSON response
+    } catch (error: unknown) {
+      console.error(
+        "Error fetching guilds data:",
+        error instanceof Error ? error.message : error
+      );
+      throw error;
+    }
+  }
+
   function filterGuildProgressData(responseData: any): FilteredProgress[] {
     const result: FilteredProgress[] = [];
 
@@ -134,7 +170,8 @@ export async function race(): Promise<any> {
 
       // Filter encounters with pullCount > 0
       const validEncounters = encounters.filter(
-        (e: { pullCount: number }) => e.pullCount > 0 && guild.rank < 10
+        (e: { pullCount: number }) =>
+          e.pullCount > 0 && (rank < 11 || name === "Pescorus")
       );
 
       // Get the last one
@@ -143,7 +180,7 @@ export async function race(): Promise<any> {
       if (lastEncounter) {
         result.push({
           name,
-          rank,
+          rank: rank ?? 0,
           encounterName: lastEncounter.shortName || lastEncounter.name,
           bestPercent: lastEncounter.bestPercent,
           pulls: lastEncounter.pullCount,
@@ -156,8 +193,13 @@ export async function race(): Promise<any> {
 
   const accessToken: string = await getAccessToken();
   const data = await get_guilds_data(accessToken);
+  const pescorus_data = await get_pescorus_data(accessToken);
+  data.data.progressRaceData.progressRace.push(
+    pescorus_data.data.progressRaceData.progressRace[0]
+  );
   const filtered = filterGuildProgressData(data);
-  /* console.log(filtered); */
+  console.log(filtered);
+  return;
   const changedResults = await compareWithFile(filtered);
   /* console.log(changedResults); */
   return changedResults;

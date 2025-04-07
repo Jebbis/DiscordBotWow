@@ -36,8 +36,8 @@ new commandkit_1.CommandKit({
     //bulkRegister: true,
 });
 client.once("ready", async () => {
-    const channel = client.channels.cache.get("1310994800727560273");
-    node_cron_1.default.schedule("* 15-23 * * *", async () => {
+    const channel = client.channels.cache.get("1358399086008598558");
+    node_cron_1.default.schedule("* 18-22 * * *", async () => {
         try {
             console.log("Running scheduled race check (Helsinki time)...");
             const guild_data = await (0, race_1.race)();
@@ -75,16 +75,16 @@ client.once("ready", async () => {
                             content: [
                                 {
                                     type: "text",
-                                    text: `Based on the data i provide you can you write a edgy sarcastic meme like tweet about ${name} based on their ranking, pull count, bestpercent and where they are in the raid meaning how many encounters they have killed. Take into account how they are doing compared to other guilds on the same encounterName. Context to use: This is a race and its called Mudleague. If best Percent is 0% that means the guild slained the encouter. If a guild is doing very good its called smurffing. If a guild has a lot of pulls compared to others it referenced as "X guild is in shambles". Mayhem. You can also use words "horror", "madness" if the guild is not doing great. The tone should be sarcastic style, humorous, friendly banter, sometimes dramatic. It should reflect competitive nature of the race. You can use some emojis but not too much(No need to use everytime), maximum of three per tweet. If a guild goes past another guilds best percentage make sure to mention that. The first guild to get Gallywix to 0% will be crowded as the winner of Mudleague. Provide only the tweet and not explanation how it was made. 
-                    Raids encounters from start to end:
+                                    text: `Based on the data i provide you can you write a edgy sarcastic meme like tweet about ${name} based on their ranking, pull count, bestpercent and where they are in the raid meaning how many encounters they have killed. Take into account how they are doing compared to other guilds on the same encounterName. Context to use: This is a race and its called Mudleague. If best Percent is 0% that means the guild slained the encouter. If a guild is doing very good its called smurffing. If a guild has a lot of pulls compared to others it referenced as "X guild is in shambles" or "Mayhem" if a lot of guilds are doing bad. The tone should be sarcastic style, humorous, friendly banter, sometimes dramatic. It should reflect competitive nature of the race. You can use some emojis but not too much(No need to use everytime), maximum of three per tweet. If a guild goes past another guilds best percentage make sure to mention that. Dont be so mean everytime, be cheerful sometimes too when a guild is making progress. The first guild to get Gallywix to 0% will be crowded as the winner of Mudleague. This is world of warcraft raid race and the raid iscalled Liberation of Undermine. List of guilds leaders: Falsu is Slacks, Laku is tony halme pro skaters, Jabbis is Muisteds, Ironi is Kultzipuppelits, Aville is Nonis. Use leaders name with 20% of chance on tweets. Some funny lines to use with like 15% chance on tweets, dont over use these: "Näyttö päälle", "Pois miinaharavasta" and "Killikilliin", "konkurssi", "shambles", "rejoice", "meneeks tää", "äh", "tonttu". Those are Finnish words and should be written in Finnish within the otherwise English tweet. Piri raidi muisteds special raid where they raid 12 hours. Pescorus is a Kazzak servers international contender while rest of the guilds are from Finland. Try to be as creative as possible with the tweets. Provide only the tweet and not explanation how it was made. 
+                    Raids encounters from start to end and their typical pull count to defeat:
                       1. Vexie
                       2. Cauldron of Carnage
                       3. Rik Reverb
                       4. Stix Bunkjunker
-                      5. Sprocketmonger
-                      6. One-Armed Bandit
-                      7. Mug'Zee
-                      8. Gallywix
+                      5. Sprocketmonger, typical pull count 77-118
+                      6. One-Armed Bandit, typical pull count 111-169
+                      7. Mug'Zee, typical pull count 97-128
+                      8. Gallywix, typical pull count 65-97
                   Data set of all guilds and their progress:
                   ${readableMessage}
                   `,
