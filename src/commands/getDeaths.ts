@@ -508,7 +508,7 @@ export async function run({ interaction, client, handler }: SlashCommandProps) {
 
     // Combine player-specific summary and detailed report
     const formattedReport = [
-      `Tonttu lista for a guild: ${guildId}`,
+      `Death list for a guild: ${guildId}`,
       "**Player specific summary:**",
       playerSpecificSummaries,
       `Settings:\n- Ignore events after deaths: ${reportIgnoreDeathsAfter}\n- If ${deathsWithInTimeFrame} or more players die within ${
@@ -517,7 +517,7 @@ export async function run({ interaction, client, handler }: SlashCommandProps) {
     ].join("\n\n");
 
     const fullReport = [
-      `Tonttu lista for a guild: ${guildId}`,
+      `Death list for a guild: ${guildId}`,
       "**Player specific summary:**",
       playerSpecificSummaries,
       "\n**Detailed Reports:**",
@@ -531,9 +531,7 @@ export async function run({ interaction, client, handler }: SlashCommandProps) {
     await interaction.followUp(formattedReport);
   }
 
-  interaction.reply(
-    `Starting to collect tonttu lista for Guild ID: ${guildId}`
-  );
+  interaction.reply(`Starting to collect death list for Guild ID: ${guildId}`);
   const accessToken: string = await getAccessToken();
   const firstKillTimestamps = await fetchFirstKillTimestamps(accessToken);
   const guildsReports = await fetchGuildsReports(accessToken);
